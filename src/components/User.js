@@ -14,7 +14,6 @@ function User({ src, name }) {
     <div
       css={css`
         background-color: lightsalmon;
-
         padding: 2rem;
       `}
     >
@@ -28,7 +27,7 @@ function User({ src, name }) {
       />
 
       <p>{name}</p>
-      <button onClick={handleClick}>View this user</button>
+      <button onClick={handleClick}>View profile</button>
     </div>
   );
 }
