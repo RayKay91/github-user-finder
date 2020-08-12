@@ -75,6 +75,7 @@ function Search() {
             border: none;
             outline: none;
             cursor: pointer;
+            border-radius: 2px;
           `}
         >
           Search

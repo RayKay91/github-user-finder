@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import '../App.css';
@@ -14,11 +14,19 @@ function Navbar() {
       css={css`
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         margin: 2rem 5rem;
       `}
     >
-      <h1>Github User Search</h1>
+      <Link
+        css={css`
+          color: black;
+          text-decoration: none;
+        `}
+        to="/"
+      >
+        <h1>Github User Search</h1>
+      </Link>
 
       <ul
         css={css`

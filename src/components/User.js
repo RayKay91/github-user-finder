@@ -7,13 +7,14 @@ function User({ src, name }) {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/users/:id');
+    history.push(`/user_profile/${name}`);
   };
 
   return (
     <div
       css={css`
-        background-color: lightsalmon;
+        border: 1px solid black;
+        border-radius: 2px;
         padding: 2rem;
       `}
     >
@@ -26,8 +27,29 @@ function User({ src, name }) {
         alt={name}
       />
 
-      <p>{name}</p>
-      <button onClick={handleClick}>View profile</button>
+      <p className="user-details">{name}</p>
+      <button
+        css={css`
+          background-color: black;
+          color: white;
+          padding: 8px;
+          text-decoration: none;
+          outline: none;
+          border: none;
+          border-radius: 2px;
+          letter-spacing: 1.5;
+          cursor: pointer;
+          border: 2px solid black;
+          transition: 0.1s all ease-in-out;
+          &:hover {
+            color: black;
+            background-color: white;
+          }
+        `}
+        onClick={handleClick}
+      >
+        View profile →
+      </button>
     </div>
   );
 }
